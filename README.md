@@ -83,7 +83,7 @@ Abra no navegador: [http://localhost:4200](http://localhost:4200)
 
 ---
 
-## 📝 Alunas
+## 📝 Estudantes
 
 - [Joana Elise](https://github.com/joanaeliseal)
 - [Felipe Brito](https://github.com/FelipeBritoLC)
