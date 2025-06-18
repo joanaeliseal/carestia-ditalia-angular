@@ -5,7 +5,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#️-estrutura-de-pastas">Estrutura de Pastas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#️-instalando">Instalando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-alunas">Alunas</a>
+  <a href="#-estudantes">Estudantes</a>
 </p>
 
 ## 💻 Sobre a Refatoração
