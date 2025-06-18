@@ -1,0 +1,17 @@
+.active {
+  font-weight: bold;
+  background-color: white;
+  color: #CE2B37 !important;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+#cabecalho {
+  background-image: url('/assets/img/grafico-header.png');
+  background-repeat: no-repeat;
+  background-size: 30%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
