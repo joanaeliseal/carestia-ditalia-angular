@@ -1,59 +1,89 @@
-# CarestiaDitaliaAngular
+<h1 align="center">RESTAURANTE ITALIANO - Carestia D'Itália (Refatorado em Angular)</h1>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+<p align="center">
+  <a href="#-sobre-a-refatoração">Sobre a Refatoração</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#️-estrutura-de-pastas">Estrutura de Pastas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#️-instalando">Instalando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-alunas">Alunas</a>
+</p>
 
-## Development server
+## 💻 Sobre a Refatoração
 
-To start a local development server, run:
+Este projeto é uma **refatoração do site do restaurante fictício "Carestia D'Itália"**, desenvolvido originalmente em HTML e CSS com Bootstrap, como parte da disciplina de Linguagem de Marcação (2023.1).
+
+A proposta agora é **transformar o site estático em uma aplicação dinâmica com Angular**, utilizando roteamento de páginas e componentes reutilizáveis.
+
+Objetivos principais:
+- Separação de páginas com rotas (`/`, `/cardapio`, `/contato`);
+- Componente de cabeçalho (`Header`) reutilizável entre todas as páginas;
+- Estrutura escalável para futura adição de funcionalidades dinâmicas;
+- Interface visual fiel à versão original, utilizando apenas Bootstrap como biblioteca de estilos.
+
+---
+
+## ✨ Tecnologias
+
+Este projeto foi refatorado utilizando:
+
+- [Angular Standalone](https://angular.io/guide/standalone-components)
+- [Bootstrap](https://getbootstrap.com/)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+
+---
+
+## 🗂️ Estrutura de Pastas
+
+```
+src/
+├── app/
+│   ├── app.ts                            # Componente raiz
+│   ├── app.html
+│   ├── app.routes.ts                     # Definição das rotas (em andamento)
+│   ├── shared/
+│   │   └── header/
+│   │       ├── header.component.ts
+│   │       ├── header.component.html
+│   │       └── header.component.css
+│   └── pages/
+│       ├── home/
+│       │   ├── home.component.ts
+│       │   ├── home.component.html
+│       │   └── home.component.css
+│       ├── cardapio/
+│       │   ├── cardapio.component.ts
+│       │   ├── cardapio.component.html
+│       │   └── cardapio.component.css
+│       └── contato/
+│           ├── contato.component.ts
+│           ├── contato.component.html
+│           └── contato.component.css
+├── assets/
+│   └── img/                              # Imagens utilizadas na aplicação
+├── styles.css                            # CSS global (importa o Bootstrap)
+├── main.ts                               # Bootstrap da aplicação
+└── index.html
+```
+
+---
+
+## ▶️ Instalando
+
+Você pode clonar este repositório e executar o projeto localmente com os seguintes comandos:
 
 ```bash
+git clone https://github.com/joanaeliseal/carestia-ditalia-angular
+cd carestia-ditalia-angular
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abra no navegador: [http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📝 Alunas
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Joana Elise](https://github.com/joanaeliseal)
+- [Felipe Brito](https://github.com/FelipeBritoLC)
