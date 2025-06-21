@@ -1,1 +1,80 @@
-<p>contato works!</p>
+<div class="container mt-4 p-4 bg-white rounded border">
+  <h2 class="text-center mb-4">ESTAMOS ABERTOS</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <table class="table text-center">
+        <tbody>
+          <tr><td>Domingo</td><td>19:00 às 22:00</td></tr>
+          <tr><td>Segunda</td><td>Fechado</td></tr>
+          <tr><td>Terça</td><td>19:00 às 22:00</td></tr>
+          <tr><td>Quarta</td><td>19:00 às 22:00</td></tr>
+          <tr><td>Quinta</td><td>19:00 às 22:00</td></tr>
+          <tr><td>Sexta</td><td>19:00 às 22:00</td></tr>
+          <tr><td>Sábado</td><td>19:00 às 22:00</td></tr>
+        </tbody>
+      </table>
+
+      <div class="text-center mt-4">
+        <i class="bi bi-telephone"></i> (83) 3585-8468
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 p-4 bg-white rounded border text-center">
+  <p><i class="bi bi-geo-alt-fill"></i> Avenida Sapé - Manaíra, João Pessoa - PB</p>
+  <iframe
+    src="https://www.google.com/maps?q=Av.+Sapé,+Manaíra,+João+Pessoa,+PB&output=embed"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+</div>
+
+<div class="container mt-4 p-4 bg-white rounded border">
+  <h2 class="text-center mb-4">FAÇA SUA RESERVA</h2>
+  <form>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Digite seu nome">
+    </div>
+    <div class="mb-3">
+      <input type="tel" class="form-control" placeholder="Digite seu telefone">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Sua reserva será para:</label><br />
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="dia" id="hoje" value="hoje" checked>
+        <label class="form-check-label" for="hoje">Hoje</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="dia" id="amanha" value="amanha">
+        <label class="form-check-label" for="amanha">Amanhã</label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <select class="form-select">
+        <option>Horário</option>
+        <option>19:00</option>
+        <option>19:30</option>
+        <option>20:00</option>
+        <option>20:30</option>
+        <option>21:00</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <select class="form-select">
+        <option>Nº de pessoas</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5+</option>
+      </select>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-danger">Finalizar reserva</button>
+    </div>
+  </form>
+</div>
