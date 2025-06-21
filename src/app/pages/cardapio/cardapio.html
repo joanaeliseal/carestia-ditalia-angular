@@ -1,1 +1,16 @@
 <p>cardapio works!</p>
+
+<section class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let item of cardapio">
+      <div class="card h-100 shadow-sm">
+        <img [src]="item.imagem" class="card-img-top" [alt]="item.titulo" />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.titulo }}</h5>
+          <p class="card-text text-muted">{{ item.descricao }}</p>
+          <p class="fw-bold text-danger fs-5">{{ item.preco }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
