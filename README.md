@@ -92,7 +92,7 @@ npm install
 ng serve
 ```
 
-Abra no navegador: [http://localhost:4200](http://localhost:4200)
+Abra no navegador: [Carestia D'Italia](https://joanaeliseal.github.io/carestia-ditalia-angular/)
 
 ---
 
