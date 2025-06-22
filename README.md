@@ -44,19 +44,6 @@ src/
 │
 │   ├── core/                             # (Nova) Serviços centrais
 │   │   └── reserva.service.ts            # Serviço responsável por requisições HTTP de reserva
-│
-│   ├── shared/                           # Componentes reutilizáveis
-│   │   ├── header/
-│   │   │   ├── header.component.ts
-│   │   │   ├── header.component.html
-│   │   │   └── header.component.css
-│   │   ├── modal/                        # (Nova - opcional) Componente de modal de confirmação
-│   │   │   ├── confirm-modal.component.ts
-│   │   │   ├── confirm-modal.component.html
-│   │   │   └── confirm-modal.component.css
-│   │   └── signals/                      # (Nova) Armazena os signals globais
-│   │       └── reserva.signal.ts         # Signal para exibir confirmação de reserva
-│
 │   └── pages/
 │       ├── home/
 │       │   ├── home.component.ts
@@ -70,6 +57,13 @@ src/
 │           ├── contato.component.ts
 │           ├── contato.component.html
 │           └── contato.component.css
+│   ├── shared/                           # Componentes reutilizáveis
+│   │   ├── header/
+│   │   │   ├── header.component.ts
+│   │   │   ├── header.component.html
+│   │   │   └── header.component.css
+│   │   └── signals/                      # (Nova) Armazena os signals globais
+│   │       └── reserva.signal.ts         # Signal para exibir confirmação de reserva
 │
 ├── assets/
 │   └── img/
