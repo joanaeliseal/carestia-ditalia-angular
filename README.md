@@ -38,14 +38,25 @@ Este projeto foi refatorado utilizando:
 ```
 src/
 ├── app/
-│   ├── app.ts                            # Componente raiz
+│   ├── app.ts
 │   ├── app.html
-│   ├── app.routes.ts                     # Definição das rotas (em andamento)
-│   ├── shared/
-│   │   └── header/
-│   │       ├── header.component.ts
-│   │       ├── header.component.html
-│   │       └── header.component.css
+│   ├── app.routes.ts
+│
+│   ├── core/                             # (Nova) Serviços centrais
+│   │   └── reserva.service.ts            # Serviço responsável por requisições HTTP de reserva
+│
+│   ├── shared/                           # Componentes reutilizáveis
+│   │   ├── header/
+│   │   │   ├── header.component.ts
+│   │   │   ├── header.component.html
+│   │   │   └── header.component.css
+│   │   ├── modal/                        # (Nova - opcional) Componente de modal de confirmação
+│   │   │   ├── confirm-modal.component.ts
+│   │   │   ├── confirm-modal.component.html
+│   │   │   └── confirm-modal.component.css
+│   │   └── signals/                      # (Nova) Armazena os signals globais
+│   │       └── reserva.signal.ts         # Signal para exibir confirmação de reserva
+│
 │   └── pages/
 │       ├── home/
 │       │   ├── home.component.ts
@@ -59,11 +70,13 @@ src/
 │           ├── contato.component.ts
 │           ├── contato.component.html
 │           └── contato.component.css
+│
 ├── assets/
-│   └── img/                              # Imagens utilizadas na aplicação
-├── styles.css                            # CSS global (importa o Bootstrap)
-├── main.ts                               # Bootstrap da aplicação
+│   └── img/
+├── styles.css
+├── main.ts
 └── index.html
+
 ```
 
 ---

@@ -35,10 +35,10 @@ export class Cardapio {
       imagem: 'assets/img/cardapio/tiramisu.png'
     },
     {
-      titulo: 'Vinho Branco (garrafa)',
-      descricao: 'Vinho Chardonnay encorpado e suave.',
-      preco: 'R$ 72,90',
-      imagem: 'assets/img/cardapio/vinho.png'
+      titulo: 'Struffoli',
+      descricao: 'Massa doce frita em bolinhas.',
+      preco: 'R$ 15,90',
+      imagem: 'assets/img/cardapio/struffoli.png'
     },
     {
       titulo: 'Nhoque de batata',
@@ -53,10 +53,10 @@ export class Cardapio {
       imagem: 'assets/img/cardapio/ravioli.png'
     },
     {
-      titulo: 'Struffoli',
-      descricao: 'Massa doce frita em bolinhas.',
-      preco: 'R$ 15,90',
-      imagem: 'assets/img/cardapio/struffoli.png'
+      titulo: 'Vinho Branco (garrafa)',
+      descricao: 'Vinho Chardonnay encorpado e suave.',
+      preco: 'R$ 72,90',
+      imagem: 'assets/img/cardapio/vinho.png'
     },
     {
       titulo: 'Sucos variados',
@@ -69,6 +69,18 @@ export class Cardapio {
       descricao: '',
       preco: 'R$ 6,50',
       imagem: 'assets/img/cardapio/coca cola.png'
-    }
-  ];
+    },
+    {
+      titulo: 'Guaraná Lata',
+      descricao: '',
+      preco: 'R$ 6,50',
+      imagem: 'assets/img/cardapio/guarana.png'
+    },
+    {
+      titulo: 'Coca Zero Lata',
+      descricao: '',
+      preco: 'R$ 6,50',
+      imagem: 'assets/img/cardapio/coca_zero.png'
+    },
+  ]
 }

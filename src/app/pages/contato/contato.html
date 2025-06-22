@@ -1,3 +1,4 @@
+<!-- Horários de funcionamento -->
 <div class="container mt-4 p-4 bg-white rounded border">
   <h2 class="text-center mb-4">ESTAMOS ABERTOS</h2>
   <div class="row justify-content-center">
@@ -21,7 +22,8 @@
   </div>
 </div>
 
-<div class="container mt-4 p-4 bg-white rounded border text-center">
+<!-- Mapa -->
+<div class="container mb-4 mt-4 p-4 bg-white rounded border text-center">
   <p><i class="bi bi-geo-alt-fill"></i> Avenida Sapé - Manaíra, João Pessoa - PB</p>
   <iframe
     src="https://www.google.com/maps?q=Av.+Sapé,+Manaíra,+João+Pessoa,+PB&output=embed"
@@ -33,48 +35,71 @@
   ></iframe>
 </div>
 
-<div class="container mt-4 p-4 bg-white rounded border">
-  <h2 class="text-center mb-4">FAÇA SUA RESERVA</h2>
-  <form>
-    <div class="mb-3">
-      <input type="text" class="form-control" placeholder="Digite seu nome">
-    </div>
-    <div class="mb-3">
-      <input type="tel" class="form-control" placeholder="Digite seu telefone">
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Sua reserva será para:</label><br />
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="dia" id="hoje" value="hoje" checked>
-        <label class="form-check-label" for="hoje">Hoje</label>
+<!-- Início do formulário -->
+<div class="container my-5">
+  <div class="bg-white p-4 rounded shadow-sm">
+    <h2 class="text-center mb-4">FAÇA SUA RESERVA</h2>
+    <form [formGroup]="reservaForm" (ngSubmit)="handleSubmit()">
+
+      <!-- Campo Nome -->
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Digite seu nome" formControlName="nome" />
+        @if(reservaForm.get('nome')?.touched && reservaForm.get('nome')?.invalid) {
+          <span class="text-danger">* Nome obrigatório (mínimo 3 caracteres)</span>
+        }
       </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="dia" id="amanha" value="amanha">
-        <label class="form-check-label" for="amanha">Amanhã</label>
+
+      <!-- Campo Telefone -->
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="(83) 999999999" formControlName="telefone" />
+        @if(reservaForm.get('telefone')?.touched && reservaForm.get('telefone')?.invalid) {
+          <span class="text-danger">* Telefone inválido. Formato esperado: (83) 999999999</span>
+        }
       </div>
-    </div>
-    <div class="mb-3">
-      <select class="form-select">
-        <option>Horário</option>
-        <option>19:00</option>
-        <option>19:30</option>
-        <option>20:00</option>
-        <option>20:30</option>
-        <option>21:00</option>
-      </select>
-    </div>
-    <div class="mb-3">
-      <select class="form-select">
-        <option>Nº de pessoas</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5+</option>
-      </select>
-    </div>
-    <div class="text-center">
-      <button class="btn btn-danger">Finalizar reserva</button>
-    </div>
-  </form>
+
+      <!-- Opção Hoje/Amanhã -->
+      <div class="mb-3">
+        <label class="form-label me-3">Sua reserva será para:</label>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" formControlName="data" value="hoje" id="hoje" />
+          <label for="hoje" class="form-check-label">Hoje</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" formControlName="data" value="amanha" id="amanha" />
+          <label for="amanha" class="form-check-label">Amanhã</label>
+        </div>
+      </div>
+
+      <!-- Horário -->
+      <div class="mb-3">
+        <select class="form-control" formControlName="horario">
+          <option value="">Horário</option>
+          <option *ngFor="let h of ['19:00', '19:30', '20:00', '20:30', '21:00', '21:30']">{{ h }}</option>
+        </select>
+      </div>
+
+      <!-- Número de Pessoas -->
+      <div class="mb-4">
+        <select class="form-control" formControlName="pessoas">
+          <option value="">Nº de pessoas</option>
+          <option *ngFor="let p of [1,2,3,4,5,6]" [value]="p">{{ p }}</option>
+        </select>
+      </div>
+
+      <!-- Botão -->
+      <div class="text-center">
+        <button class="btn btn-danger" type="submit" [disabled]="reservaForm.invalid">
+          Finalizar reserva
+        </button>
+      </div>
+
+    </form>
+    @if(reservaConfirmada()) {
+      <div class="alert alert-success text-center mt-3">
+      Reserva enviada com sucesso!
+      </div>
+    }
+
+  </div>
 </div>
+
