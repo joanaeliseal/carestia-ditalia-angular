@@ -86,7 +86,7 @@ npm install
 ng serve
 ```
 
-Abra no navegador: [Carestia D'Italia](https://joanaeliseal.github.io/carestia-ditalia-angular/)
+Abra no navegador: [Carestia D'Italia](https://carestia-ditalia-angular.vercel.app/)
 
 ---
 

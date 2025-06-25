@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReservaService } from '../../core/reserva.service';
@@ -12,7 +12,8 @@ import { reservaConfirmada } from '../../shared/signals/reserva.signal';
   imports: [ReactiveFormsModule, CommonModule],
 })
 export class Contato {
-  reservaConfirmada = reservaConfirmada;
+  //reservaConfirmada = reservaConfirmada;
+  success = signal(false);
   reservaForm!: FormGroup;
 
   constructor(
@@ -37,12 +38,12 @@ export class Contato {
 
       this.reserva.enviarReserva(dados).subscribe({
         next: () => {
-          this.reservaConfirmada.set(true);
+          this.success.set(true);
           this.reservaForm.reset();
         },
         error: (err) => {
           console.error('Erro ao enviar reserva:', err);
-          this.reservaConfirmada.set(false);
+          this.success.set(false);
         }
       });
     }

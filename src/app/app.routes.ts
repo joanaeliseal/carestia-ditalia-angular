@@ -1,11 +1,17 @@
 import { Routes } from '@angular/router';
-import { Home } from './pages/home/home';
-import { Cardapio } from './pages/cardapio/cardapio';
-import { Contato } from './pages/contato/contato';
 
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'cardapio', component: Cardapio },
-  { path: 'contato', component: Contato },
+  {
+    path: '',
+    loadComponent: () => import('./pages/home/home').then(m => m.Home)
+  },
+  {
+    path: 'cardapio',
+    loadComponent: () => import('./pages/cardapio/cardapio').then(m => m.Cardapio)
+  },
+  {
+    path: 'contato',
+    loadComponent: () => import('./pages/contato/contato').then(m => m.Contato)
+  },
   { path: '**', redirectTo: '' }
 ];
