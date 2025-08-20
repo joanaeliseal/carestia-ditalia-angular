@@ -46,22 +46,22 @@ src/
 │   │   └── reserva.service.ts            # Serviço responsável por requisições HTTP de reserva
 │   └── pages/
 │       ├── home/
-│       │   ├── home.component.ts
-│       │   ├── home.component.html
-│       │   └── home.component.css
+│       │   ├── home.ts
+│       │   ├── home.html
+│       │   └── home.css
 │       ├── cardapio/
-│       │   ├── cardapio.component.ts
-│       │   ├── cardapio.component.html
-│       │   └── cardapio.component.css
+│       │   ├── cardapio.ts
+│       │   ├── cardapio.html
+│       │   └── cardapio.css
 │       └── contato/
-│           ├── contato.component.ts
-│           ├── contato.component.html
-│           └── contato.component.css
+│           ├── contato.ts
+│           ├── contato.html
+│           └── contato.css
 │   ├── shared/                           # Componentes reutilizáveis
 │   │   ├── header/
-│   │   │   ├── header.component.ts
-│   │   │   ├── header.component.html
-│   │   │   └── header.component.css
+│   │   │   ├── header.ts
+│   │   │   ├── header.html
+│   │   │   └── header.css
 │   │   └── signals/                      # (Nova) Armazena os signals globais
 │   │       └── reserva.signal.ts         # Signal para exibir confirmação de reserva
 ├── assets/
