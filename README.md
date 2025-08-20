@@ -46,14 +46,14 @@ Essa divisão permite uma arquitetura moderna baseada em API REST, com separaç�
 ### 1. Clonar os repositórios
 
 ```bash
-git clone https://github.com/seu-usuario/carestia-ditalia-angular
-git clone https://github.com/seu-usuario/carestia-backend
+git clone https://github.com/joanaeliseal/carestia-ditalia-angular
+
 ```
 
 ### 2. Executar o Back-end
 
 ```bash
-cd carestia-backend
+cd carestia-ditalia-angular/backend
 ./mvnw spring-boot:run
 ```
 
