@@ -32,12 +32,12 @@ Essa divisão permite uma arquitetura moderna baseada em API REST, com separaç�
 
 ## ✨ Tecnologias
 
-| Front-end       | Back-end         | Banco de Dados |
+| Front-end        | Back-end         | Banco de Dados |
 |------------------|------------------|----------------|
-| Angular 17+      | Java 17+         | PostgreSQL     |
-| Bootstrap        | Spring Boot 3+   | Flyway (opcional) |
+| Angular 22       | Java 21          | PostgreSQL     |
+| Bootstrap        | Spring Boot 3+   |                |
 | HTML + CSS       | Spring Data JPA  |                |
-| JSON-server (dev)| Swagger UI (doc) |                |
+| JSON-server (dev)|                  |                |
 
 ---
 # 📊 Mapeamento de Requisitos: Front-end (Angular) vs Back-end (Spring Boot)
