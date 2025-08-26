@@ -12,7 +12,7 @@ export interface Reserva {
 
 @Injectable({ providedIn: 'root' })
 export class ReservaService {
-  private apiUrl = 'http://localhost:3000/reservas';
+  private apiUrl = 'http://localhost:8080/api/reservas';
 
   constructor(private http: HttpClient) {}
 

@@ -40,6 +40,29 @@ Essa divisão permite uma arquitetura moderna baseada em API REST, com separaç�
 | JSON-server (dev)| Swagger UI (doc) |                |
 
 ---
+# 📊 Mapeamento de Requisitos: Front-end (Angular) vs Back-end (Spring Boot)
+
+Este documento apresenta o mapeamento dos requisitos técnicos originalmente implementados com Angular (front-end) para a nova etapa do projeto com **Spring Boot (back-end)**, com foco na construção de uma **API REST real**.
+
+## ✅ Requisitos que migraram do Front-End para o Back-End
+
+| Requisito no Angular                                                                 | Aplicação no Spring Boot                                                                              |
+|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| Uso de requisições assíncronas com `HttpClientModule` (POST para API simulada)       | Agora conectado a uma API real desenvolvida com Spring Boot.                                          |
+| Simulação de API REST com JSON-server                                                | Substituído por uma API REST real com Spring Boot, com suporte a GET, POST, DELETE e persistência.   |
+| Página de contato com formulário de reserva                                          | Continua no front-end, mas envia dados reais para o back-end.                                         |
+| Estrutura de pastas organizada com boas práticas (`core/`, `shared/`, `pages/`)      | O back-end segue padrão de pastas como: `controller/`, `service/`, `repository/`, `model/`.          |
+---
+## 📋 Resumo Comparativo
+
+| Tipo de Requisito           | Angular (Front-End)               | Spring Boot (Back-End)                        |
+|----------------------------|----------------------------------|----------------------------------------------|
+| Interface             | ✅                                | 🚫 (responsabilidade do front-end)           |
+| Estrutura do projeto       | ✅                                | ✅ (Controller, Service, etc.)               |
+| Requisição HTTP (POST)     | ✅ (simulada via JSON-server)     | ✅ (real, com persistência)                  |
+| Validações e feedback UI   | ✅                                | 🚫 (validações feitas no front-end)          |
+| Persistência de dados      | 🚫                                | ✅ (banco de dados com JPA)                  |
+---
 
 ## ▶️ Como Executar o Projeto
 
