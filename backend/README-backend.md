@@ -15,19 +15,18 @@ Este repositório contém a **API REST** do sistema Carestia D'Itália, desenvol
 ### Funcionalidades:
 - Criação de reservas (endpoint POST)
 - Validação de dados do formulário
-- Integração com banco de dados PostgreSQL
+- Integração com banco de dados MySQL
 
 ---
 
 ## Tecnologias
 
-- Java 17+
+- Java 21
 - Spring Boot 3+
 - Spring Web
 - Spring Data JPA
-- PostgreSQL
-- Flyway (opcional)
-- Swagger UI (opcional)
+- MySQL
+- Postman
 
 ---
 
@@ -54,7 +53,7 @@ src/
 ## ▶️ Instalando
 
 ```bash
-git clone https://github.com/seu-usuario/carestia-backend
+git clone https://github.com/joanaeliseal/carestia-backend
 cd carestia-backend
 ./mvnw spring-boot:run
 ```
@@ -67,5 +66,5 @@ API disponível em: `http://localhost:8080/api/reservas`
 
 - ✅ Expor endpoint `POST /api/reservas`
 - ✅ Validar campos obrigatórios
-- ✅ Salvar dados no PostgreSQL
+- ✅ Salvar dados no MySQL
 - ✅ Permitir consumo pelo front-end

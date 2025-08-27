@@ -13,7 +13,7 @@
 
 **Carestia D'Itália** é uma aplicação web desenvolvida para um restaurante fictício italiano. O projeto foi refatorado com base em uma versão estática antiga e agora está dividido em duas partes:
 
-- **Front-end** em TypeScript + Angular v22  
+- **Front-end** em TypeScript + Angular v20  
 - **Back-end** em Java + Spring Boot + PostgreSQL  
 
 Essa divisão permite uma arquitetura moderna baseada em API REST, com separação entre cliente e servidor.
@@ -34,7 +34,7 @@ Essa divisão permite uma arquitetura moderna baseada em API REST, com separaç�
 
 | Front-end        | Back-end         | Banco de Dados |
 |------------------|------------------|----------------|
-| Angular 22       | Java 21          | PostgreSQL     |
+| Angular v20      | Java 21          |      MySQL     |
 | Bootstrap        | Spring Boot 3+   |                |
 | HTML + CSS       | Spring Data JPA  |                |
 | JSON-server (dev)|                  |                |

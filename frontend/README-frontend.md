@@ -79,7 +79,7 @@ Este projeto foi desenvolvido atendendo aos seguintes requisitos propostos para 
 
 ### ✅ Requisitos Técnicos
 
-- ✅ Projeto com tema livre utilizando **Angular v17+**
+- ✅ Projeto com tema livre utilizando **Angular v20**
 - ✅ Uso de **Components** (componentes standalone para páginas e cabeçalho reutilizável)
 - ✅ Uso de **Templates** (arquivos `.html` vinculados a cada componente)
 - ✅ Uso de **Rotas** com Angular Router (`/`, `/cardapio`, `/contato`)
