@@ -14,7 +14,7 @@
 **Carestia D'Itália** é uma aplicação web desenvolvida para um restaurante fictício italiano. O projeto foi refatorado com base em uma versão estática antiga e agora está dividido em duas partes:
 
 - **Front-end** em TypeScript + Angular v20  
-- **Back-end** em Java + Spring Boot + PostgreSQL  
+- **Back-end** em Java + Spring Boot + MySQL  
 
 Essa divisão permite uma arquitetura moderna baseada em API REST, com separação entre cliente e servidor.
 
@@ -26,7 +26,7 @@ Essa divisão permite uma arquitetura moderna baseada em API REST, com separaç�
 - Formulário reativo para reservas
 - Validações com feedback visual
 - Envio de reservas para API REST (com Signal de confirmação)
-- Armazenamento de reservas em banco de dados PostgreSQL
+- Armazenamento de reservas em banco de dados MySQL
 
 ---
 
