@@ -94,12 +94,39 @@
       </div>
 
     </form>
-    @if(success()) {
-      <div class="alert alert-success text-center mt-3">
+  @if(success()) {
+    <div class="alert alert-success text-center mt-3">
       Reserva enviada com sucesso!
-      </div>
-    }
+    </div>
+  }
+  <!--Cards de Reservas-->
+  <hr class="my-5">
+  <h3 class="text-center mb-4">Reservas Cadastradas</h3>
 
+  <!--NgIf is deprecated. Use the @if block instead. Intent to remove in v22-->
+  <div *ngIf="reservas().length === 0" class="text-center text-muted">
+    Nenhuma reserva encontrada.
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <div
+      class="card border border-danger shadow-sm"
+      style="width: 20rem;"
+      *ngFor="let r of reservas()"
+    >
+      <div class="card-body">
+        <h5 class="card-title">{{ r.nome }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ r.telefone }}</h6>
+        <p class="card-text">
+          <strong>Data:</strong> {{ r.data }}<br>
+          <strong>Horário:</strong> {{ r.horario }}<br>
+          <strong>Pessoas:</strong> {{ r.pessoas }}
+        </p>
+        <button class="btn btn-outline-danger btn-sm w-100" (click)="cancelarReserva(r.id)">
+          Cancelar reserva
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 

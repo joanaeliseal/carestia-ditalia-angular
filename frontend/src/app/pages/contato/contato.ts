@@ -14,6 +14,34 @@ import { reservaConfirmada } from '../../shared/signals/reserva.signal';
 export class Contato {
   //reservaConfirmada = reservaConfirmada;
   success = signal(false);
+  reservas = signal<any[]>([]);
+
+  ngOnInit(): void {
+    this.carregarReservas();
+  }
+
+  carregarReservas(): void {
+    this.reserva.getReservas().subscribe({
+      next: (dados) => {
+      console.log('Reservas carregadas:', dados); // para depuração
+      this.reservas.set(dados);
+    },
+      error: (err) => console.error('Erro ao carregar reservas:', err)
+    });
+  }
+
+  cancelarReserva(id: number): void {
+    this.reserva.deletarReserva(id).subscribe({
+      next: () => {
+        const atualizadas = this.reservas().filter(r => r.id !== id);
+        this.reservas.set(atualizadas);
+      },
+      error: (err) => {
+        console.error('Erro ao deletar reserva:', err);
+      }
+    });
+  }
+
   reservaForm!: FormGroup;
 
   constructor(

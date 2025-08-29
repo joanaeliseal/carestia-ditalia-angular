@@ -6,3 +6,11 @@ span {
   margin-left: 5px;
   color: red;
 }
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
