@@ -57,18 +57,15 @@
         }
       </div>
 
-      <!-- Opção Hoje/Amanhã -->
+      <!-- Campo de Data com calendário -->
       <div class="mb-3">
-        <label class="form-label me-3">Sua reserva será para:</label>
-        <div class="form-check form-check-inline">
-          <input type="radio" class="form-check-input" formControlName="data" value="hoje" id="hoje" />
-          <label for="hoje" class="form-check-label">Hoje</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input type="radio" class="form-check-input" formControlName="data" value="amanha" id="amanha" />
-          <label for="amanha" class="form-check-label">Amanhã</label>
-        </div>
+        <label class="form-label">Selecione a data da reserva:</label>
+        <input type="date" class="form-control" formControlName="data" />
+        @if(reservaForm.get('data')?.touched && reservaForm.get('data')?.invalid) {
+          <span class="text-danger">* Data obrigatória.</span>
+        }
       </div>
+
 
       <!-- Horário -->
       <div class="mb-3">
