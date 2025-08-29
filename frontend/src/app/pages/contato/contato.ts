@@ -54,27 +54,67 @@ export class Contato {
         '',
         [Validators.required, Validators.pattern(/^\(?\d{2}\)?\s?\d{8,9}$/)]
       ],
-      data: ['hoje', Validators.required],
+      data: ['', Validators.required], // opção de selecionar uma data futura
       horario: ['', Validators.required],
       pessoas: [1, [Validators.required, Validators.min(1), Validators.max(6)]],
     });
   }
 
-  handleSubmit(): void {
-    if (this.reservaForm.valid) {
-      const dados = this.reservaForm.value;
+handleSubmit(): void {
+  if (this.reservaForm.valid) {
+    const dados = this.reservaForm.value;
 
-      this.reserva.enviarReserva(dados).subscribe({
-        next: () => {
-          this.success.set(true);
-          this.reservaForm.reset();
-        },
-        error: (err) => {
-          console.error('Erro ao enviar reserva:', err);
-          this.success.set(false);
-        }
-      });
+    // Debug: verificar todos os dados antes do envio
+    console.log('Dados da reserva:', dados);
+
+    // Detectar se a data vem no formato yyyy-MM-dd ou dd/MM/yyyy
+    let dataSelecionada: Date;
+
+    if (dados.data.includes('/')) {
+      // Formato dd/MM/yyyy
+      const [dia, mes, ano] = dados.data.split('/');
+      dataSelecionada = new Date(+ano, +mes - 1, +dia);
+    } else {
+      // Formato yyyy-MM-dd
+      dataSelecionada = new Date(dados.data);
     }
+
+    const diaSemana = dataSelecionada.getDay(); // 0 = domingo, 1 = segunda...
+
+    // Data inválida
+    if (isNaN(dataSelecionada.getTime())) {
+      alert('Data inválida. Selecione uma data válida no calendário.');
+      return;
+    }
+
+    // Impede reservas na segunda-feira
+    if (diaSemana === 1) {
+      alert('O restaurante está fechado às segundas-feiras. Escolha outro dia.');
+      return;
+    }
+
+    // Campos obrigatórios faltando
+    if (!dados.horario || !dados.pessoas) {
+      alert('Por favor, selecione o horário e o número de pessoas.');
+      return;
+    }
+
+    // Tudo ok, enviar reserva
+    this.reserva.enviarReserva(dados).subscribe({
+      next: () => {
+        this.success.set(true);
+        this.reservaForm.reset();
+        this.carregarReservas(); // Atualiza os cards
+      },
+      error: (err) => {
+        console.error('Erro ao enviar reserva:', err);
+        this.success.set(false);
+      }
+    });
   }
+}
+
+
+
 }
 
